@@ -11,8 +11,6 @@
 // console.log(cake.ingredients[1]);
 // console.log(cake.ingredients[2]);
 
-let restaurants = [PipesCafe, BluewaterGrill, Subway, PhilsBBQ] 
-
 let PipesCafe = {
     restaurantName: 'Pipes Cafe',
     town: 'Cardiff by the Sea',
@@ -46,12 +44,18 @@ let PhilsBBQ = {
     
 }
 
-if (restaurantName = "Subway") {
-    console.log('People be like \"Subway sucks.\" My Brother in XC, YOU made the ' + cuisine + '!');
-} else if (visitedRecent = true) {
-    console.log('I went to ' + restaurantName + ' in ' + town + ' recently, their ' + cuisine + ' are pretty good');
-} else if (visitedEver = true) {
-    console.log('It\'s been a while since I went to ' + restaurantName + ' in ' + town + '. I rememeber liking their ' + cuisine + '.');
-} else {
-    console.log('I\'ve never been to ' + restaurantName + ' in ' + town + ', but I have heard good things about their ' + cuisine + '.');
+let restaurants = [PipesCafe, BluewaterGrill, PhilsBBQ] 
+
+for (let index = 0; index < restaurants.length; index++) {
+    let restCounted = restaurants[index];
+    
+    if (restCounted.visitedRecent == true) {
+        console.log('I went to ' + restCounted.restaurantName + ' in ' + restCounted.town + ' recently, their ' + restCounted.cuisine + ' are pretty good');
+    } else if (restCounted.visitedEver == true) {
+        console.log('It\'s been a while since I went to ' + restCounted.restaurantName + ' in ' + restCounted.town + '. I rememeber liking their ' + restCounted.cuisine + '.');
+    } else {
+        console.log('I\'ve never been to ' + restCounted.restaurantName + ' in ' + restCounted.town + ', but I have heard good things about their ' + restCounted.cuisine + '.');
+    }
 }
+
+
